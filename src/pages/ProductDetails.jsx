@@ -41,11 +41,11 @@ export default function ProductDetails() {
               <p>Quantity</p>
               <div className="counter">
                 <span className="minus" onClick={decr}>
-                  <HiMinus />
+                  <HiMinus className="minus"/>
                 </span>
                 <span className="value">{quantity}</span>
                 <span className="add" onClick={incr}>
-                  <HiPlus />
+                  <HiPlus className="plus"/>
                 </span>
               </div>
             </div>
@@ -64,7 +64,7 @@ export default function ProductDetails() {
         </div>
       </div>
       <div className="descBox">
-        <p className="title">Description</p>
+        <p className="title">DESCRIPTION</p>
         <p className="desc">{product.description}</p>
       </div>
     </div>

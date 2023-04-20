@@ -166,11 +166,11 @@ border: none;
 }
 .title{
   font-weight: 700;
-font-size: 12px;
+font-size: 14px;
 }
 .desc{
   font-weight: 400;
-font-size: 14px;
+font-size: 12px;
 }
 .box3{
   justify-content: space-between;
@@ -221,7 +221,17 @@ font-size: 12px;
 .box3{
   margin:2rem 0;
 }
+.minus, .plus{
+  padding-top: 2px;
+}
 
+.b2:hover{
+background-color: #4bf19e;
+color: #212B36;
+}
+.b1:hover{
+background-color: #f7cd78;
+}
 
 @media screen and (max-width:1024px) {
   .info_cont{

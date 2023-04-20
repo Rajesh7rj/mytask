@@ -20,9 +20,9 @@ export default function ProductList() {
           <TableHead>
             <TableRow style={{ backgroundColor: "#F4F6F8" }}>
               <TableCell>Title</TableCell>
-              <TableCell align="right">Category</TableCell>
-              <TableCell align="right">Price</TableCell>
-              <TableCell align="right">Available Count</TableCell>
+              <TableCell align="left">Category</TableCell>
+              <TableCell align="left">Price</TableCell>
+              <TableCell align="left">Available Count</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -40,7 +40,7 @@ export default function ProductList() {
                         window.scrollTo({
                           top: 0,
                           left: 0,
-                          behavior: "smooth",
+                          // behavior: "smooth",
                         });
                       }}
                     >
@@ -55,11 +55,11 @@ export default function ProductList() {
                     </Link>{" "}
                   </div>
                 </TableCell>
-                <TableCell className="category" align="right">
+                <TableCell className="category" align="left">
                   {product.category}
                 </TableCell>
-                <TableCell align="right">{product.price}</TableCell>
-                <TableCell align="right">
+                <TableCell align="left">{product.price}</TableCell>
+                <TableCell align="left">
                   {product?.rating?.count ?? 0}
                 </TableCell>
               </TableRow>
