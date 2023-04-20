@@ -4,11 +4,11 @@ import { BiCartAdd } from "react-icons/bi";
 import { useLocation } from "react-router-dom";
 
 export default function ProductDetails() {
-  const [quantity, setQuantity] = useState(0)
+  const [quantity, setQuantity] = useState(0);
   const location = useLocation();
   let { product } = location.state;
-  let incr = () =>setQuantity (quantity + 1);
-  let decr = () =>setQuantity( quantity === 1 ? 1: quantity - 1);
+  let incr = () => setQuantity(quantity + 1);
+  let decr = () => setQuantity(quantity === 1 ? 1 : quantity - 1);
   return (
     <div id="productDetails">
       <h4 className="heading">Product Details</h4>
@@ -24,7 +24,7 @@ export default function ProductDetails() {
             <p className="rating">Rating : {product?.rating?.rate ?? 0}</p>
             <p className="price">$ {product.price}</p>
           </div>
-          <hr />
+          <p className="line"></p> 
           <div className="box2">
             <div className="size">
               <label for="select">Size</label>
@@ -48,14 +48,15 @@ export default function ProductDetails() {
                   <HiPlus />
                 </span>
               </div>
-              
             </div>
-            <p className="count">Available Count: {product.rating.count - quantity}</p>
+            <p className="count">
+              Available Count: {product.rating.count - quantity}
+            </p>
           </div>
-          <hr />
+         <p className="line"></p> 
           <div className="box3">
             <button className="b1">
-              <BiCartAdd size={20}/>
+              <BiCartAdd size={20} />
               <p className="adc">Add to Cart</p>
             </button>
             <button className="b2">Buy Now</button>
@@ -64,10 +65,7 @@ export default function ProductDetails() {
       </div>
       <div className="descBox">
         <p className="title">Description</p>
-        <p className="desc">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut fugit
-          cupiditate repellendus qui ad. Nam maxime cum magni pariatur sequi?
-        </p>
+        <p className="desc">{product.description}</p>
       </div>
     </div>
   );
