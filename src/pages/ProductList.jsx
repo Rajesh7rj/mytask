@@ -19,10 +19,18 @@ export default function ProductList() {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow style={{ backgroundColor: "#F4F6F8" }}>
-              <TableCell>Title</TableCell>
-              <TableCell align="left">Category</TableCell>
-              <TableCell align="left">Price</TableCell>
-              <TableCell align="left">Available Count</TableCell>
+              <TableCell className="table_headings">
+                Title
+              </TableCell>
+              <TableCell className="table_headings" align="left">
+                Category
+              </TableCell>
+              <TableCell className="table_headings" align="left">
+                Price
+              </TableCell>
+              <TableCell className="table_headings" align="left">
+                Available Count
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -58,7 +66,7 @@ export default function ProductList() {
                 <TableCell className="category" align="left">
                   {product.category}
                 </TableCell>
-                <TableCell align="left">{product.price}</TableCell>
+                <TableCell align="left">${product.price}</TableCell>
                 <TableCell align="left">
                   {product?.rating?.count ?? 0}
                 </TableCell>

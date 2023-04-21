@@ -4,7 +4,7 @@ import { BiCartAdd } from "react-icons/bi";
 import { useLocation } from "react-router-dom";
 
 export default function ProductDetails() {
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   const location = useLocation();
   let { product } = location.state;
   let incr = () => setQuantity(quantity + 1);
@@ -24,7 +24,7 @@ export default function ProductDetails() {
             <p className="rating">Rating : {product?.rating?.rate ?? 0}</p>
             <p className="price">$ {product.price}</p>
           </div>
-          <p className="line"></p> 
+          <p className="line"></p>
           <div className="box2">
             <div className="size">
               <label for="select">Size</label>
@@ -41,11 +41,11 @@ export default function ProductDetails() {
               <p>Quantity</p>
               <div className="counter">
                 <span className="minus" onClick={decr}>
-                  <HiMinus className="minus"/>
+                  <HiMinus className="minus" />
                 </span>
                 <span className="value">{quantity}</span>
                 <span className="add" onClick={incr}>
-                  <HiPlus className="plus"/>
+                  <HiPlus className="plus" />
                 </span>
               </div>
             </div>
@@ -53,7 +53,7 @@ export default function ProductDetails() {
               Available Count: {product.rating.count - quantity}
             </p>
           </div>
-         <p className="line"></p> 
+          <p className="line"></p>
           <div className="box3">
             <button className="b1">
               <BiCartAdd size={20} />
